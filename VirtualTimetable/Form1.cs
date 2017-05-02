@@ -12,9 +12,16 @@ namespace VirtualTimetable
 {
     public partial class Form1 : Form
     {
+        Timetable timetable = new Timetable();
         public Form1()
         {
             InitializeComponent();
+            panelUserControll.Controls.Add(timetable);
+        }
+       private void timetableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelUserControll.Controls.Clear();
+            panelUserControll.Controls.Add(timetable);
         }
     }
 }
