@@ -13,6 +13,7 @@ namespace VirtualTimetable
     public partial class Form1 : Form
     {
         Timetable timetable = new Timetable();
+        DepartingfromStation DfS = new DepartingfromStation();        
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +23,12 @@ namespace VirtualTimetable
         {
             panelUserControll.Controls.Clear();
             panelUserControll.Controls.Add(timetable);
+        }
+
+        private void departingFromStationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelUserControll.Controls.Clear();
+            panelUserControll.Controls.Add(DfS);
         }
     }
 }

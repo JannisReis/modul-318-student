@@ -49,7 +49,7 @@
             this.panelUserControll.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelUserControll.Location = new System.Drawing.Point(12, 29);
             this.panelUserControll.Name = "panelUserControll";
-            this.panelUserControll.Size = new System.Drawing.Size(528, 311);
+            this.panelUserControll.Size = new System.Drawing.Size(528, 375);
             this.panelUserControll.TabIndex = 2;
             // 
             // menuStrip2
@@ -75,12 +75,13 @@
             this.departingFromStationToolStripMenuItem.Name = "departingFromStationToolStripMenuItem";
             this.departingFromStationToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.departingFromStationToolStripMenuItem.Text = "Departing from Station";
+            this.departingFromStationToolStripMenuItem.Click += new System.EventHandler(this.departingFromStationToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 352);
+            this.ClientSize = new System.Drawing.Size(552, 415);
             this.Controls.Add(this.panelUserControll);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
