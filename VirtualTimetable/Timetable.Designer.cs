@@ -34,6 +34,7 @@
             this.lblTimetable = new System.Windows.Forms.Label();
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
             this.cBoxTo = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listResults
@@ -90,12 +91,23 @@
             this.cBoxTo.Name = "cBoxTo";
             this.cBoxTo.Size = new System.Drawing.Size(100, 21);
             this.cBoxTo.TabIndex = 1;
+            this.cBoxTo.TextUpdate += new System.EventHandler(this.cBoxTo_TextUpdate);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(46, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxTo);
             this.Controls.Add(this.cBoxFrom);
             this.Controls.Add(this.lblTimetable);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label lblTimetable;
         private System.Windows.Forms.ComboBox cBoxFrom;
         private System.Windows.Forms.ComboBox cBoxTo;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

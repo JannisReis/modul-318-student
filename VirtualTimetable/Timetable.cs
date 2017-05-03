@@ -31,18 +31,37 @@ namespace VirtualTimetable
         {
             if (cBoxFrom.Text.Count() > 2)
             {
-                var suche = cBoxFrom.Text;
-                var stations = trans.GetStations(suche + ",");
-                cBoxFrom.
+                var searchFrom = cBoxFrom.Text;
+                var stationsFrom = trans.GetStations(searchFrom + ",");
                 cBoxFrom.Items.Clear();
 
-                foreach (Station station in stations.StationList)
+                foreach (Station station in stationsFrom.StationList)
                 {
-                    string s = Convert.ToString(station);
-                    cBoxFrom.Items.Add(s);
+                    string sFrom = Convert.ToString(station);
+                    cBoxFrom.SelectionStart = cBoxFrom.Text.Length;
+                    cBoxFrom.Items.Add(sFrom);
                     cBoxFrom.DroppedDown = true;
                 }
             }
         }
+
+        private void cBoxTo_TextUpdate(object sender, EventArgs e)
+        {
+            if (cBoxTo.Text.Count() > 2)
+            {
+                var searchTo = cBoxTo.Text;
+                var stationsTo = trans.GetStations(searchTo + ",");
+                cBoxTo.Items.Clear();
+
+                foreach (Station station in stationsTo.StationList)
+                {
+                    string sTo = Convert.ToString(station);
+                    cBoxTo.SelectionStart = cBoxTo.Text.Length;
+                    cBoxTo.Items.Add(sTo);
+                    cBoxTo.DroppedDown = true;
+                }
+            }
+        }
     }
-}
+    }
+
