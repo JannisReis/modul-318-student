@@ -80,6 +80,7 @@ namespace VirtualTimetable
                 num1.SubItems.Add(depTime);
                 num1.SubItems.Add(arrTime);
                 listResults.Items.Add(num1);
+                
             }
         }
         private void Timetable_Load(object sender, EventArgs e)
