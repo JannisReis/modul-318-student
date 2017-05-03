@@ -16,7 +16,6 @@ namespace VirtualTimetable
         public Timetable()
         {
             InitializeComponent();
-            
         }
         /// <summary>
         /// Transport Interface used for Station-Search
@@ -48,14 +47,33 @@ namespace VirtualTimetable
             cBoxFrom.Focus();
             cBoxFrom.Items.Clear();
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Connections connections = new Connections();
+            connections = trans.GetConnections(cBoxFrom.Text, cBoxTo.Text);
+            foreach (Connection con in connections.ConnectionList)
+            {
+                DateTime departure = Convert.ToDateTime(con.From.Departure);
+                string depTime = departure.ToShortTimeString();
+
+                DateTime arrival = Convert.ToDateTime(con.To.Arrival);
+                string arrTime = arrival.ToShortTimeString();
+
+                string[] durration = con.Duration.Split('d')[1].Split(':');
+
+                string.Format(con.From.Departure );
+                listResults.Items.Add("From: " + con.From.Station.Name + "|To: " + con.To.Station.Name + "|Duration: " + durration[0] + ":" + durration[1] + "|Departure: " + depTime + "|Arrival: " + arrTime);
+                listResults.Items.Add("");
+            }
+        }
         private void cBoxFrom_TextUpdate(object sender, EventArgs e)
         {
             Autocomplete(cBoxFrom);
         }
+
         private void cBoxTo_TextUpdate(object sender, EventArgs e)
         {
             Autocomplete(cBoxTo);
         }
     }
-    }
-
+}
