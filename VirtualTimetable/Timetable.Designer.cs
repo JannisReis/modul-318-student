@@ -44,7 +44,7 @@
             this.listResults.FormattingEnabled = true;
             this.listResults.Location = new System.Drawing.Point(0, 150);
             this.listResults.Name = "listResults";
-            this.listResults.Size = new System.Drawing.Size(640, 210);
+            this.listResults.Size = new System.Drawing.Size(504, 210);
             this.listResults.TabIndex = 10;
             // 
             // lblTo
@@ -95,7 +95,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(46, 16);
+            this.btnSearch.Location = new System.Drawing.Point(163, 105);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 12;
@@ -116,7 +116,7 @@
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
             this.Name = "Timetable";
-            this.Size = new System.Drawing.Size(643, 375);
+            this.Size = new System.Drawing.Size(515, 375);
             this.Load += new System.EventHandler(this.Timetable_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

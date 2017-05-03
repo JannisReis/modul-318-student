@@ -32,6 +32,7 @@
             this.listResults = new System.Windows.Forms.ListBox();
             this.lblTimetable = new System.Windows.Forms.Label();
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFrom
@@ -50,7 +51,7 @@
             this.listResults.FormattingEnabled = true;
             this.listResults.Location = new System.Drawing.Point(0, 150);
             this.listResults.Name = "listResults";
-            this.listResults.Size = new System.Drawing.Size(515, 210);
+            this.listResults.Size = new System.Drawing.Size(504, 210);
             this.listResults.TabIndex = 11;
             // 
             // lblTimetable
@@ -70,17 +71,28 @@
             this.cBoxFrom.Name = "cBoxFrom";
             this.cBoxFrom.Size = new System.Drawing.Size(100, 21);
             this.cBoxFrom.TabIndex = 0;
+            this.cBoxFrom.TextChanged += new System.EventHandler(this.cBoxFrom_TextChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(163, 105);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 13;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // DepartingfromStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxFrom);
             this.Controls.Add(this.lblTimetable);
             this.Controls.Add(this.listResults);
             this.Controls.Add(this.lblFrom);
             this.Name = "DepartingfromStation";
-            this.Size = new System.Drawing.Size(528, 375);
+            this.Size = new System.Drawing.Size(515, 375);
             this.Load += new System.EventHandler(this.DepartingfromStation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,5 +104,6 @@
         private System.Windows.Forms.ListBox listResults;
         private System.Windows.Forms.Label lblTimetable;
         private System.Windows.Forms.ComboBox cBoxFrom;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

@@ -23,7 +23,7 @@ namespace VirtualTimetable
         public ITransport trans = new Transport();
 
         /// <summary>
-        /// Autocomplete used for the autocomplete of the Combobox
+        /// Autocomplete used for the autocomplete of the Combobox for Timetable User Control
         /// </summary>
         public void Autocomplete(ComboBox cb)
         {
@@ -51,6 +51,7 @@ namespace VirtualTimetable
         {
             Connections connections = new Connections();
             connections = trans.GetConnections(cBoxFrom.Text, cBoxTo.Text);
+            listResults.Items.Clear();
             foreach (Connection con in connections.ConnectionList)
             {
                 DateTime departure = Convert.ToDateTime(con.From.Departure);
@@ -62,7 +63,7 @@ namespace VirtualTimetable
                 string[] durration = con.Duration.Split('d')[1].Split(':');
 
                 string.Format(con.From.Departure );
-                listResults.Items.Add("From: " + con.From.Station.Name + "|To: " + con.To.Station.Name + "|Duration: " + durration[0] + ":" + durration[1] + "|Departure: " + depTime + "|Arrival: " + arrTime);
+                listResults.Items.Add("From: " + con.From.Station.Name + "   To: " + con.To.Station.Name + "   Duration: " + durration[0] + ":" + durration[1] + " min   Departure: " + depTime + "   Arrival: " + arrTime);
                 listResults.Items.Add("");
             }
         }
