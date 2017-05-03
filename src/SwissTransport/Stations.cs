@@ -34,7 +34,7 @@ namespace SwissTransport
 
         public override string ToString()
         {
-            return ("Name: "+ this.Name); 
+            return (this.Name); 
         }
     }
 
