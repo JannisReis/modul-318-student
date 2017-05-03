@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listResults = new System.Windows.Forms.ListBox();
             this.lblTo = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblTimetable = new System.Windows.Forms.Label();
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
             this.cBoxTo = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.listResults = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // listResults
-            // 
-            this.listResults.BackColor = System.Drawing.Color.LightGray;
-            this.listResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listResults.FormattingEnabled = true;
-            this.listResults.Location = new System.Drawing.Point(0, 150);
-            this.listResults.Name = "listResults";
-            this.listResults.Size = new System.Drawing.Size(504, 210);
-            this.listResults.TabIndex = 10;
             // 
             // lblTo
             // 
@@ -104,26 +93,24 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button1
+            // listResults
             // 
-            this.button1.Location = new System.Drawing.Point(262, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Search2";
-            this.button1.UseVisualStyleBackColor = true;
+            this.listResults.Location = new System.Drawing.Point(0, 150);
+            this.listResults.Name = "listResults";
+            this.listResults.Size = new System.Drawing.Size(504, 210);
+            this.listResults.TabIndex = 14;
+            this.listResults.UseCompatibleStateImageBehavior = false;
             // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listResults);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxTo);
             this.Controls.Add(this.cBoxFrom);
             this.Controls.Add(this.lblTimetable);
-            this.Controls.Add(this.listResults);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
             this.Name = "Timetable";
@@ -135,14 +122,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listResults;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTimetable;
         private System.Windows.Forms.ComboBox cBoxFrom;
         private System.Windows.Forms.ComboBox cBoxTo;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listResults;
     }
 }

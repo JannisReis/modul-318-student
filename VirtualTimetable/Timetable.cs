@@ -21,7 +21,7 @@ namespace VirtualTimetable
         /// Transport Interface used for Station-Search
         /// </summary>
         public ITransport trans = new Transport();
-
+        public Connections connections = new Connections();
         /// <summary>
         /// Autocomplete used for the autocomplete of the Combobox for Timetable User Control
         /// </summary>
@@ -42,16 +42,23 @@ namespace VirtualTimetable
                 }
             }
         }
-        private void Timetable_Load(object sender, EventArgs e)
+        /// <summary>
+        /// CreateListView used to Create the Listview
+        /// </summary>
+        public void CreateListView()
         {
-            cBoxFrom.Focus();
-            cBoxFrom.Items.Clear();
+            listResults.View = View.Details;
+            listResults.FullRowSelect = true;
+            listResults.Columns.Add("", 18);
+            listResults.Columns.Add("From:", 99);
+            listResults.Columns.Add("To:", 99);
+            listResults.Columns.Add("Durration:", 87);
+            listResults.Columns.Add("Departure:", 87);
+            listResults.Columns.Add("Arrival:", 90);
         }
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void FillListView()
         {
-            Connections connections = new Connections();
-            connections = trans.GetConnections(cBoxFrom.Text, cBoxTo.Text);
-            listResults.Items.Clear();
+            int x = 0;
             foreach (Connection con in connections.ConnectionList)
             {
                 DateTime departure = Convert.ToDateTime(con.From.Departure);
@@ -60,12 +67,33 @@ namespace VirtualTimetable
                 DateTime arrival = Convert.ToDateTime(con.To.Arrival);
                 string arrTime = arrival.ToShortTimeString();
 
-                string[] durration = con.Duration.Split('d')[1].Split(':');
+                string[] durTime = con.Duration.Split('d')[1].Split(':');
 
-                string.Format(con.From.Departure );
-                listResults.Items.Add("From: " + con.From.Station.Name + "   To: " + con.To.Station.Name + "   Duration: " + durration[0] + ":" + durration[1] + " min   Departure: " + depTime + "   Arrival: " + arrTime);
-                listResults.Items.Add("");
+                string.Format(con.From.Departure);
+                x++;
+                string num = Convert.ToString(x);
+                ListViewItem num1 = new ListViewItem(num);
+
+                num1.SubItems.Add(con.From.Station.Name);
+                num1.SubItems.Add(con.To.Station.Name);
+                num1.SubItems.Add(durTime[0] + ":" + durTime[1]);
+                num1.SubItems.Add(depTime);
+                num1.SubItems.Add(arrTime);
+                listResults.Items.Add(num1);
             }
+        }
+        private void Timetable_Load(object sender, EventArgs e)
+        {
+            cBoxFrom.Focus();
+            cBoxFrom.Items.Clear();
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            connections = trans.GetConnections(cBoxFrom.Text, cBoxTo.Text);
+            listResults.Items.Clear();
+            CreateListView();
+            FillListView();
+            
         }
         private void cBoxFrom_TextUpdate(object sender, EventArgs e)
         {
