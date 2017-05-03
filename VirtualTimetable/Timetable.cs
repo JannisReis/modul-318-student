@@ -18,15 +18,15 @@ namespace VirtualTimetable
             InitializeComponent();
             
         }
+        /// <summary>
+        /// Transport Interface used for Station-Search
+        /// </summary>
         public ITransport trans = new Transport();
-
-        //when this UserControll is Loaded the textbox From is selected and cleared
         private void Timetable_Load(object sender, EventArgs e)
         {
             cBoxFrom.Focus();
             cBoxFrom.Items.Clear();
         }
-        //Autocorrect after more than 3 Letters
         private void cBoxFrom_TextUpdate(object sender, EventArgs e)
         {
             if (cBoxFrom.Text.Count() > 2)
