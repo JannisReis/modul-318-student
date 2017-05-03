@@ -34,7 +34,6 @@
             this.lblTimetable = new System.Windows.Forms.Label();
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
             this.cBoxTo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listResults
@@ -92,22 +91,11 @@
             this.cBoxTo.Size = new System.Drawing.Size(100, 21);
             this.cBoxTo.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(217, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.cBoxTo);
             this.Controls.Add(this.cBoxFrom);
             this.Controls.Add(this.lblTimetable);
@@ -130,6 +118,5 @@
         private System.Windows.Forms.Label lblTimetable;
         private System.Windows.Forms.ComboBox cBoxFrom;
         private System.Windows.Forms.ComboBox cBoxTo;
-        private System.Windows.Forms.Button button1;
     }
 }
