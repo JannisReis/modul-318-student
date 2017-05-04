@@ -35,12 +35,14 @@
             this.cBoxTo = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.listResultsTimetable = new System.Windows.Forms.ListView();
+            this.dTPicker = new System.Windows.Forms.DateTimePicker();
+            this.lblTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTo
             // 
             this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(3, 110);
+            this.lblTo.Location = new System.Drawing.Point(3, 81);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(23, 13);
             this.lblTo.TabIndex = 7;
@@ -49,7 +51,7 @@
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(3, 84);
+            this.lblFrom.Location = new System.Drawing.Point(3, 50);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(33, 13);
             this.lblFrom.TabIndex = 6;
@@ -59,7 +61,7 @@
             // 
             this.lblTimetable.AutoSize = true;
             this.lblTimetable.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimetable.Location = new System.Drawing.Point(144, 11);
+            this.lblTimetable.Location = new System.Drawing.Point(144, 0);
             this.lblTimetable.Name = "lblTimetable";
             this.lblTimetable.Size = new System.Drawing.Size(117, 26);
             this.lblTimetable.TabIndex = 11;
@@ -68,24 +70,24 @@
             // cBoxFrom
             // 
             this.cBoxFrom.FormattingEnabled = true;
-            this.cBoxFrom.Location = new System.Drawing.Point(46, 81);
+            this.cBoxFrom.Location = new System.Drawing.Point(46, 47);
             this.cBoxFrom.Name = "cBoxFrom";
-            this.cBoxFrom.Size = new System.Drawing.Size(100, 21);
+            this.cBoxFrom.Size = new System.Drawing.Size(132, 21);
             this.cBoxFrom.TabIndex = 0;
             this.cBoxFrom.TextUpdate += new System.EventHandler(this.cBoxFrom_TextUpdate);
             // 
             // cBoxTo
             // 
             this.cBoxTo.FormattingEnabled = true;
-            this.cBoxTo.Location = new System.Drawing.Point(46, 107);
+            this.cBoxTo.Location = new System.Drawing.Point(46, 73);
             this.cBoxTo.Name = "cBoxTo";
-            this.cBoxTo.Size = new System.Drawing.Size(100, 21);
+            this.cBoxTo.Size = new System.Drawing.Size(132, 21);
             this.cBoxTo.TabIndex = 1;
             this.cBoxTo.TextUpdate += new System.EventHandler(this.cBoxTo_TextUpdate);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(163, 105);
+            this.btnSearch.Location = new System.Drawing.Point(186, 100);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 12;
@@ -101,11 +103,31 @@
             this.listResultsTimetable.TabIndex = 14;
             this.listResultsTimetable.UseCompatibleStateImageBehavior = false;
             // 
+            // dTPicker
+            // 
+            this.dTPicker.CustomFormat = "dd.MM.yyyy  || HH.mm";
+            this.dTPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTPicker.Location = new System.Drawing.Point(46, 104);
+            this.dTPicker.Name = "dTPicker";
+            this.dTPicker.Size = new System.Drawing.Size(132, 20);
+            this.dTPicker.TabIndex = 15;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(3, 105);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(33, 13);
+            this.lblTime.TabIndex = 16;
+            this.lblTime.Text = "Date:";
+            // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.dTPicker);
             this.Controls.Add(this.listResultsTimetable);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxTo);
@@ -129,5 +151,7 @@
         private System.Windows.Forms.ComboBox cBoxTo;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView listResultsTimetable;
+        private System.Windows.Forms.DateTimePicker dTPicker;
+        private System.Windows.Forms.Label lblTime;
     }
 }

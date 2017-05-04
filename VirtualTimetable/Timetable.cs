@@ -35,7 +35,7 @@ namespace VirtualTimetable
             listResultsTimetable.Items.Clear();
             ListViewHelper listView = new ListViewHelper();
             listView.CreateListView(listResultsTimetable);
-            listView.FillListViewTimetable(cBoxFrom,cBoxTo, listResultsTimetable);   
+            listView.FillListViewTimetable(cBoxFrom,cBoxTo, listResultsTimetable, dTPicker);   
         }
         private void cBoxFrom_TextUpdate(object sender, EventArgs e)
         {

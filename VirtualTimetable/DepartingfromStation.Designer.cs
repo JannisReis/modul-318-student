@@ -38,7 +38,7 @@
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(3, 84);
+            this.lblFrom.Location = new System.Drawing.Point(3, 50);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(33, 13);
             this.lblFrom.TabIndex = 9;
@@ -48,7 +48,7 @@
             // 
             this.lblTimetable.AutoSize = true;
             this.lblTimetable.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimetable.Location = new System.Drawing.Point(86, 16);
+            this.lblTimetable.Location = new System.Drawing.Point(144, 0);
             this.lblTimetable.Name = "lblTimetable";
             this.lblTimetable.Size = new System.Drawing.Size(261, 26);
             this.lblTimetable.TabIndex = 12;
@@ -57,15 +57,15 @@
             // cBoxFrom
             // 
             this.cBoxFrom.FormattingEnabled = true;
-            this.cBoxFrom.Location = new System.Drawing.Point(46, 81);
+            this.cBoxFrom.Location = new System.Drawing.Point(46, 47);
             this.cBoxFrom.Name = "cBoxFrom";
-            this.cBoxFrom.Size = new System.Drawing.Size(100, 21);
+            this.cBoxFrom.Size = new System.Drawing.Size(132, 21);
             this.cBoxFrom.TabIndex = 0;
             this.cBoxFrom.TextUpdate += new System.EventHandler(this.cBoxFrom_TextUpdate);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(163, 105);
+            this.btnSearch.Location = new System.Drawing.Point(186, 100);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 13;

@@ -47,9 +47,11 @@ namespace VirtualTimetable
         /// <summary>
         /// FillListView used to write the Data into the ListView in Timetable User Controll
         /// </summary>
-        public void FillListViewTimetable(ComboBox cbfrom,ComboBox cbTo, System.Windows.Forms.ListView lb)
+        public void FillListViewTimetable(ComboBox cbfrom,ComboBox cbTo, System.Windows.Forms.ListView lb, DateTimePicker DTP)
         {
-            connections = trans.GetConnections(cbfrom.Text, cbTo.Text);
+            string date = "&date=" + DTP.Value.Year + "-" + DTP.Value.Month + "-" + DTP.Value.Day;
+            string time = "&time=" + DTP.Value.Hour + ":" + DTP.Value.Minute;
+            connections = trans.GetConnections(cbfrom.Text, cbTo.Text, date, time);
             int x = 0;
             foreach (Connection con in connections.ConnectionList)
             {
