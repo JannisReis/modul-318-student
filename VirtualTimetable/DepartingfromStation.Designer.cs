@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblFrom = new System.Windows.Forms.Label();
-            this.listResults = new System.Windows.Forms.ListBox();
             this.lblTimetable = new System.Windows.Forms.Label();
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.listResultsDfS = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblFrom
@@ -43,16 +43,6 @@
             this.lblFrom.Size = new System.Drawing.Size(33, 13);
             this.lblFrom.TabIndex = 9;
             this.lblFrom.Text = "From:";
-            // 
-            // listResults
-            // 
-            this.listResults.BackColor = System.Drawing.Color.LightGray;
-            this.listResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listResults.FormattingEnabled = true;
-            this.listResults.Location = new System.Drawing.Point(0, 150);
-            this.listResults.Name = "listResults";
-            this.listResults.Size = new System.Drawing.Size(504, 210);
-            this.listResults.TabIndex = 11;
             // 
             // lblTimetable
             // 
@@ -71,7 +61,7 @@
             this.cBoxFrom.Name = "cBoxFrom";
             this.cBoxFrom.Size = new System.Drawing.Size(100, 21);
             this.cBoxFrom.TabIndex = 0;
-            this.cBoxFrom.TextChanged += new System.EventHandler(this.cBoxFrom_TextChanged);
+            this.cBoxFrom.TextUpdate += new System.EventHandler(this.cBoxFrom_TextUpdate);
             // 
             // btnSearch
             // 
@@ -81,15 +71,24 @@
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // listResultsDfS
+            // 
+            this.listResultsDfS.Location = new System.Drawing.Point(0, 150);
+            this.listResultsDfS.Name = "listResultsDfS";
+            this.listResultsDfS.Size = new System.Drawing.Size(504, 210);
+            this.listResultsDfS.TabIndex = 14;
+            this.listResultsDfS.UseCompatibleStateImageBehavior = false;
             // 
             // DepartingfromStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listResultsDfS);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxFrom);
             this.Controls.Add(this.lblTimetable);
-            this.Controls.Add(this.listResults);
             this.Controls.Add(this.lblFrom);
             this.Name = "DepartingfromStation";
             this.Size = new System.Drawing.Size(515, 375);
@@ -101,9 +100,9 @@
 
         #endregion
         private System.Windows.Forms.Label lblFrom;
-        private System.Windows.Forms.ListBox listResults;
         private System.Windows.Forms.Label lblTimetable;
         private System.Windows.Forms.ComboBox cBoxFrom;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ListView listResultsDfS;
     }
 }

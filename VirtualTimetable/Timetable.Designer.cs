@@ -34,7 +34,7 @@
             this.cBoxFrom = new System.Windows.Forms.ComboBox();
             this.cBoxTo = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.listResults = new System.Windows.Forms.ListView();
+            this.listResultsTimetable = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblTo
@@ -93,20 +93,20 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // listResults
+            // listResultsTimetable
             // 
-            this.listResults.Location = new System.Drawing.Point(0, 150);
-            this.listResults.Name = "listResults";
-            this.listResults.Size = new System.Drawing.Size(504, 210);
-            this.listResults.TabIndex = 14;
-            this.listResults.UseCompatibleStateImageBehavior = false;
+            this.listResultsTimetable.Location = new System.Drawing.Point(0, 150);
+            this.listResultsTimetable.Name = "listResultsTimetable";
+            this.listResultsTimetable.Size = new System.Drawing.Size(504, 210);
+            this.listResultsTimetable.TabIndex = 14;
+            this.listResultsTimetable.UseCompatibleStateImageBehavior = false;
             // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.listResults);
+            this.Controls.Add(this.listResultsTimetable);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cBoxTo);
             this.Controls.Add(this.cBoxFrom);
@@ -128,6 +128,6 @@
         private System.Windows.Forms.ComboBox cBoxFrom;
         private System.Windows.Forms.ComboBox cBoxTo;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ListView listResults;
+        private System.Windows.Forms.ListView listResultsTimetable;
     }
 }

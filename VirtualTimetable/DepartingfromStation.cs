@@ -21,35 +21,23 @@ namespace VirtualTimetable
         /// Transport Interface used for Station-Search
         /// </summary>
         public ITransport trans = new Transport();
-        /// <summary>
-        /// Autocomplete used for the autocomplete of the Combobox for DepartingfromStation User Control
-        /// </summary>
-        public void Autocomplete(ComboBox cb)
-        {
-            if (cb.Text.Count() > 2)
-            {
-                var searchFrom = cb.Text;
-                var stationsFrom = trans.GetStations(searchFrom + ",");
-                cb.Items.Clear();
-
-                foreach (Station station in stationsFrom.StationList)
-                {
-                    string sFrom = Convert.ToString(station);
-                    cb.SelectionStart = cb.Text.Length;
-                    cb.Items.Add(sFrom);
-                    cb.DroppedDown = true;
-                }
-            }
-        }
         private void DepartingfromStation_Load(object sender, EventArgs e)
         {
             cBoxFrom.Focus();
             
         }
-
-        private void cBoxFrom_TextChanged(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            Autocomplete(cBoxFrom);
+            listResultsDfS.Items.Clear();
+            ListViewHelper listView = new ListViewHelper();
+            listView.CreateListView(listResultsDfS);
+            listView.FillListViewDfS(cBoxFrom, listResultsDfS);
+        }
+
+        private void cBoxFrom_TextUpdate(object sender, EventArgs e)
+        {
+            Autocomplete Autocomplete = new Autocomplete();
+            Autocomplete.autocomplete(cBoxFrom);
         }
     }
 }
