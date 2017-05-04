@@ -90,7 +90,7 @@
             this.btnSearch.Location = new System.Drawing.Point(186, 100);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 12;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -101,6 +101,7 @@
             this.listResultsTimetable.Name = "listResultsTimetable";
             this.listResultsTimetable.Size = new System.Drawing.Size(504, 210);
             this.listResultsTimetable.TabIndex = 14;
+            this.listResultsTimetable.TabStop = false;
             this.listResultsTimetable.UseCompatibleStateImageBehavior = false;
             // 
             // dTPicker
@@ -110,7 +111,7 @@
             this.dTPicker.Location = new System.Drawing.Point(46, 104);
             this.dTPicker.Name = "dTPicker";
             this.dTPicker.Size = new System.Drawing.Size(132, 20);
-            this.dTPicker.TabIndex = 15;
+            this.dTPicker.TabIndex = 3;
             // 
             // lblTime
             // 

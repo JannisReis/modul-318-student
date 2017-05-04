@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace VirtualTimetable
 {
-    class Autocomplete
+    class AutocompleteHelper
     {
         /// <summary>
         /// Station-Search
@@ -21,7 +21,7 @@ namespace VirtualTimetable
         /// <summary>
         /// Autocomplete used for the autocomplete of the Combobox for User Controls
         /// </summary>
-        public void autocomplete(ComboBox cb)
+        public void Autocomplete(ComboBox cb)
         {
             if (cb.Text.Count() > 2)
             {

@@ -23,21 +23,34 @@ namespace VirtualTimetable
         public ITransport trans = new Transport();
         private void DepartingfromStation_Load(object sender, EventArgs e)
         {
-            cBoxFrom.Focus();
-            
+            cBoxFrom.Focus();            
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            listResultsDfS.Items.Clear();
-            ListViewHelper listView = new ListViewHelper();
-            listView.CreateListView(listResultsDfS);
-            listView.FillListViewDfS(cBoxFrom, listResultsDfS);
+            if (cBoxFrom.Text == "")
+            {
+                MessageBox.Show("Please enter a startstation!");
+            }
+            else
+            {
+                try
+                {
+                    listResultsDfS.Items.Clear();
+                    ListViewHelper listView = new ListViewHelper();
+                    listView.CreateListView(listResultsDfS);
+                    listView.FillListViewDfS(cBoxFrom, listResultsDfS);
+                }
+                catch
+                {
+                    MessageBox.Show("There are too many serverrequests!\nPlease wait... ");
+                }
+            }
         }
 
         private void cBoxFrom_TextUpdate(object sender, EventArgs e)
         {
-            Autocomplete Autocomplete = new Autocomplete();
-            Autocomplete.autocomplete(cBoxFrom);
+            AutocompleteHelper autocomplete = new AutocompleteHelper();
+            autocomplete.Autocomplete(cBoxFrom);
         }
     }
 }
