@@ -84,5 +84,14 @@ namespace VirtualTimetable
                 MessageBox.Show("There are too many serverrequests!\nPlease wait... ");
             }
         }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            string from = cBoxFrom.Text;
+            string to = cBoxTo.Text;
+
+            cBoxFrom.Text = to;
+            cBoxTo.Text = from;
+        }
     }
 }

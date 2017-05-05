@@ -37,6 +37,7 @@
             this.listResultsTimetable = new System.Windows.Forms.ListView();
             this.dTPicker = new System.Windows.Forms.DateTimePicker();
             this.lblTime = new System.Windows.Forms.Label();
+            this.btnChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTo
@@ -122,11 +123,22 @@
             this.lblTime.TabIndex = 16;
             this.lblTime.Text = "Date:";
             // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(185, 63);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(75, 23);
+            this.btnChange.TabIndex = 17;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // Timetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.dTPicker);
             this.Controls.Add(this.listResultsTimetable);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.ListView listResultsTimetable;
         private System.Windows.Forms.DateTimePicker dTPicker;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Button btnChange;
     }
 }
