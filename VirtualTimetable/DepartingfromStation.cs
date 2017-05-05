@@ -23,7 +23,9 @@ namespace VirtualTimetable
         public ITransport trans = new Transport();
         private void DepartingfromStation_Load(object sender, EventArgs e)
         {
-            cBoxFrom.Focus();            
+            cBoxFrom.Focus();
+            ListViewHelper listView = new ListViewHelper();
+            listView.CreateListView(listResultsDfS);
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -37,7 +39,6 @@ namespace VirtualTimetable
                 {
                     listResultsDfS.Items.Clear();
                     ListViewHelper listView = new ListViewHelper();
-                    listView.CreateListView(listResultsDfS);
                     listView.FillListViewDfS(cBoxFrom, listResultsDfS);
                 }
                 catch

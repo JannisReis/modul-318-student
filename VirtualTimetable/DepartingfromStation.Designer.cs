@@ -79,6 +79,7 @@
             this.listResultsDfS.Name = "listResultsDfS";
             this.listResultsDfS.Size = new System.Drawing.Size(504, 210);
             this.listResultsDfS.TabIndex = 14;
+            this.listResultsDfS.TabStop = false;
             this.listResultsDfS.UseCompatibleStateImageBehavior = false;
             // 
             // DepartingfromStation

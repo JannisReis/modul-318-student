@@ -29,6 +29,8 @@ namespace VirtualTimetable
         {
             cBoxFrom.Focus();
             cBoxFrom.Items.Clear();
+            ListViewHelper listView = new ListViewHelper();
+            listView.CreateListView(listResultsTimetable);
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -50,7 +52,6 @@ namespace VirtualTimetable
                 {
                     listResultsTimetable.Items.Clear();
                     ListViewHelper listView = new ListViewHelper();
-                    listView.CreateListView(listResultsTimetable);
                     listView.FillListViewTimetable(cBoxFrom, cBoxTo, listResultsTimetable, dTPicker);
                 }
                 catch
