@@ -65,8 +65,7 @@ namespace VirtualTimetable
 
                 string.Format(con.From.Departure);
                 x++;
-                string num = Convert.ToString(x);
-                ListViewItem num1 = new ListViewItem(num);
+                ListViewItem num1 = new ListViewItem(x.ToString());
 
                 num1.SubItems.Add(con.From.Station.Name);
                 num1.SubItems.Add(con.To.Station.Name);
@@ -78,7 +77,7 @@ namespace VirtualTimetable
             }
         }
         /// <summary>
-        /// FillListView used to write the Data into the ListView in Timetable User Controll
+        /// FillListView used to write the Data into the ListView in DfS User Controll
         /// </summary>
         public void FillListViewDfS(ComboBox cbfrom, System.Windows.Forms.ListView lb)
         {

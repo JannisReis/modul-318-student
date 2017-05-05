@@ -31,9 +31,8 @@ namespace VirtualTimetable
 
                 foreach (Station station in stationsFrom.StationList)
                 {
-                    string sFrom = Convert.ToString(station);
                     cb.SelectionStart = cb.Text.Length;
-                    cb.Items.Add(sFrom);
+                    cb.Items.Add(station.ToString());
                     cb.DroppedDown = true;
                 }
             }
